@@ -1,0 +1,74 @@
+{
+  "agent_rules": {
+    "name": "Data Extractor Agent Rules",
+    "version": "1.0",
+    "instructions": [
+      "CRITICAL: Output ONLY valid JSON with proper double quotes - NEVER use single quotes or unquoted properties",
+      "CRITICAL: Ensure JSON property names are in double quotes: \"property\" NOT property",
+      "CRITICAL: Ensure JSON string values use double quotes: \"value\" NOT 'value'",
+      "Extract ALL financial data with maximum comprehensiveness and accuracy",
+      "Translate all data to English if document is in foreign language while preserving numerical values",
+      "Extract data as-is from document without performing calculations or analysis",
+      "Focus on structured data extraction covering all 13 comprehensive categories",
+      "Include company identification, executive information, complete financial statements, business segments, geographic breakdown, financial ratios, operational metrics, capital structure, investments & acquisitions, ESG & sustainability, risk factors, forward-looking information, and audit & compliance",
+      "Prioritize completeness over speed - extract every available data point",
+      "Provide confidence scores for each extracted data point",
+      "Document the exact source location for each data point",
+      "Handle different document formats and languages",
+      "Maintain data integrity and avoid assumptions or derived metrics",
+      "Include original language notation when translation is performed"
+    ],
+    "validation_rules": [
+      "Company identification must include legal names, ticker symbols, industry codes, and contact information",
+      "Executive information must cover leadership team, board composition, and compensation",
+      "Financial statements must be comprehensive covering income statement, balance sheet, and cash flow statement in detail",
+      "Business segments must include detailed breakdown by segment with revenue, income, assets, and employee data",
+      "Geographic breakdown must include revenue, income, assets, and employee distribution by region",
+      "Financial ratios must be extracted as stated, not calculated",
+      "Operational metrics must include employee data, facilities, capacity, and KPIs",
+      "Capital structure must cover shares, debt, dividends, and credit information",
+      "ESG and sustainability metrics must be captured when available",
+      "Risk factors and forward-looking statements must be documented",
+      "All numerical data must include original units and currency specifications",
+      "Each data point must have a confidence score between 0 and 1",
+      "Source location must be specific (page number, section, table reference)",
+      "Translation notes must be included when document language differs from English"
+    ],
+    "data_quality_requirements": [
+      "Minimum confidence score of 0.7 for critical financial metrics",
+      "Minimum confidence score of 0.5 for supporting operational data",
+      "Flag any extracted value with confidence below 0.5 as 'needs_review'",
+      "Cross-reference related financial metrics for consistency",
+      "Verify mathematical relationships when possible (e.g., assets = liabilities + equity)"
+    ],
+    "output_requirements": {
+      "format": "Comprehensive structured JSON with 13 categorized data groups",
+      "categories": [
+        "company_overview",
+        "executive_leadership",
+        "financial_statements",
+        "business_segments",
+        "geographic_regions",
+        "performance_metrics",
+        "operational_data",
+        "capital_structure",
+        "investments_ma",
+        "esg_sustainability",
+        "risk_analysis",
+        "forward_outlook"
+      ],
+      "data_structure": "Each category contains array of data points with field_name, value, data_type, period, confidence, source_location, context, and original_language (if translated)",
+      "metadata": "Include document_type, document_language, total_pages, extraction_timestamp, and translation_notes",
+      "organization": "Group comprehensive data points for 12 standardized Excel sheet generation",
+      "translation": "Always provide English output with original language notation when applicable",
+      "quality_flags": "Flag any potential data quality issues or anomalies",
+      "excel_support": "Structure output to support multi-sheet Excel report generation"
+    },
+    "error_handling": [
+      "If document is unclear or corrupted, report specific issues",
+      "If financial data appears inconsistent, flag for manual review",
+      "If key financial metrics are missing, explicitly note their absence",
+      "If extraction confidence is low overall, recommend document review"
+    ]
+  }
+}

@@ -1,0 +1,168 @@
+{
+  "agent_name": "Financial Data Extractor",
+  "description": "Expert financial document analyzer that extracts comprehensive data across 12 standardized categories with precision and consistency",
+  "system_prompt": "You are an expert financial data extraction specialist. Your role is to comprehensively extract ALL financial information from documents and organize it into 12 standardized categories. Always translate foreign language content to English while preserving numerical accuracy. Focus on extraction fidelity - capture what exists without calculations or interpretations.",
+  "main_prompt": "Extract ALL financial information from the provided document and organize into 12 standardized categories. Translate foreign language content to English while preserving all numerical values exactly as stated. Extract ONLY what is explicitly stated - no calculations or derivations. Preserve original numerical values and units exactly. Include confidence scores and source locations. Focus on completeness and accuracy. EXTRACTION CATEGORIES: 1.COMPANY_OVERVIEW: Legal name, trading name, ticker symbols, industry codes, headquarters, fiscal year-end, reporting currency, stock exchanges. 2.EXECUTIVE_LEADERSHIP: CEO, CFO, Chairman details, board composition, executive compensation, management changes. 3.FINANCIAL_STATEMENTS: Income statement (revenue, COGS, gross profit, operating expenses, EBIT, net income, EPS), Balance sheet (assets, liabilities, equity, book value), Cash flow (operating, investing, financing cash flows, free cash flow). 4.BUSINESS_SEGMENTS: Segment names, revenue and income by segment, assets, capex, employees by segment. 5.GEOGRAPHIC_REGIONS: Revenue by country/region, geographic income and asset distribution, regional employee counts. 6.PERFORMANCE_METRICS: Financial ratios AS STATED (no calculations), profitability, liquidity, leverage ratios, market ratios. 7.OPERATIONAL_DATA: Employee counts, facility information, production metrics, customer data, market share, KPIs. 8.CAPITAL_STRUCTURE: Share information, repurchase programs, dividend policy, debt structure, credit ratings. 9.INVESTMENTS_MA: Joint ventures, partnerships, subsidiaries, investment portfolios, M&A activity, goodwill. 10.ESG_SUSTAINABILITY: Environmental metrics and targets, social responsibility data, governance structure. 11.RISK_ANALYSIS: Market, credit, operational risks, regulatory and currency risks, risk management disclosures. 12.FORWARD_OUTLOOK: Management guidance and forecasts, strategic initiatives, capital allocation guidance. For each extracted value provide: field_name, value (exact from document), data_type (currency/percentage/count/date/text/ratio), period, confidence (0.0-1.0), source_location, context, original_language if translated.",
+  "output_format": {
+    "type": "comprehensive_structured_json",
+    "schema": {
+      "company_overview": [
+        {
+          "field_name": "string",
+          "value": "string|number",
+          "data_type": "currency|percentage|count|date|text|ratio",
+          "period": "string",
+          "confidence": "number (0-1)",
+          "source_location": "string",
+          "context": "string",
+          "original_language": "string (if translated)"
+        }
+      ],
+      "executive_leadership": [
+        {
+          "field_name": "string",
+          "value": "string|number",
+          "data_type": "currency|percentage|count|date|text|ratio",
+          "period": "string",
+          "confidence": "number (0-1)",
+          "source_location": "string",
+          "context": "string",
+          "original_language": "string (if translated)"
+        }
+      ],
+      "financial_statements": [
+        {
+          "field_name": "string",
+          "value": "string|number",
+          "data_type": "currency|percentage|count|date|text|ratio",
+          "period": "string",
+          "confidence": "number (0-1)",
+          "source_location": "string",
+          "context": "string",
+          "original_language": "string (if translated)"
+        }
+      ],
+      "business_segments": [
+        {
+          "field_name": "string",
+          "value": "string|number",
+          "data_type": "currency|percentage|count|date|text|ratio",
+          "period": "string",
+          "confidence": "number (0-1)",
+          "source_location": "string",
+          "context": "string",
+          "original_language": "string (if translated)"
+        }
+      ],
+      "geographic_regions": [
+        {
+          "field_name": "string",
+          "value": "string|number",
+          "data_type": "currency|percentage|count|date|text|ratio",
+          "period": "string",
+          "confidence": "number (0-1)",
+          "source_location": "string",
+          "context": "string",
+          "original_language": "string (if translated)"
+        }
+      ],
+      "performance_metrics": [
+        {
+          "field_name": "string",
+          "value": "string|number",
+          "data_type": "currency|percentage|count|date|text|ratio",
+          "period": "string",
+          "confidence": "number (0-1)",
+          "source_location": "string",
+          "context": "string",
+          "original_language": "string (if translated)"
+        }
+      ],
+      "operational_data": [
+        {
+          "field_name": "string",
+          "value": "string|number",
+          "data_type": "currency|percentage|count|date|text|ratio",
+          "period": "string",
+          "confidence": "number (0-1)",
+          "source_location": "string",
+          "context": "string",
+          "original_language": "string (if translated)"
+        }
+      ],
+      "capital_structure": [
+        {
+          "field_name": "string",
+          "value": "string|number",
+          "data_type": "currency|percentage|count|date|text|ratio",
+          "period": "string",
+          "confidence": "number (0-1)",
+          "source_location": "string",
+          "context": "string",
+          "original_language": "string (if translated)"
+        }
+      ],
+      "investments_ma": [
+        {
+          "field_name": "string",
+          "value": "string|number",
+          "data_type": "currency|percentage|count|date|text|ratio",
+          "period": "string",
+          "confidence": "number (0-1)",
+          "source_location": "string",
+          "context": "string",
+          "original_language": "string (if translated)"
+        }
+      ],
+      "esg_sustainability": [
+        {
+          "field_name": "string",
+          "value": "string|number",
+          "data_type": "currency|percentage|count|date|text|ratio",
+          "period": "string",
+          "confidence": "number (0-1)",
+          "source_location": "string",
+          "context": "string",
+          "original_language": "string (if translated)"
+        }
+      ],
+      "risk_analysis": [
+        {
+          "field_name": "string",
+          "value": "string|number",
+          "data_type": "currency|percentage|count|date|text|ratio",
+          "period": "string",
+          "confidence": "number (0-1)",
+          "source_location": "string",
+          "context": "string",
+          "original_language": "string (if translated)"
+        }
+      ],
+      "forward_outlook": [
+        {
+          "field_name": "string",
+          "value": "string|number",
+          "data_type": "currency|percentage|count|date|text|ratio",
+          "period": "string",
+          "confidence": "number (0-1)",
+          "source_location": "string",
+          "context": "string",
+          "original_language": "string (if translated)"
+        }
+      ],
+      "document_metadata": {
+        "document_type": "string",
+        "document_language": "string",
+        "total_pages": "number",
+        "extraction_timestamp": "string",
+        "translation_notes": "string"
+      },
+      "extraction_summary": {
+        "total_data_points": "number",
+        "categories_found": "array",
+        "confidence_average": "number",
+        "extraction_notes": "string"
+      }
+    }
+  }
+}

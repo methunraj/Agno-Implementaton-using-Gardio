@@ -1,0 +1,30 @@
+{
+  "categories": {
+    "financial": {
+      "name": "Financial Content Extraction (Simple Structure)",
+      "icon": "📊",
+      "description": "Extract all tables and sectioned data from annual reports, placing each type in separate Excel sheets, without calculations.",
+      "prompts": [
+        {
+          "id": "extract_all_tables_simple",
+          "title": "Extract All Tables & Sections (No Charts, No Calculations)",
+          "icon": "📄",
+          "description": "Extract every table and structured data section from the annual report PDF and organize into clearly named Excel sheets. No calculations or charts—just pure content.",
+          "prompt": "For the provided annual report, extract EVERY table and structured content section found (including financial statements, notes, schedules, management discussion tables, segmental/line/regional breakdowns, etc.) and output into an Excel (.xlsx) file. Each sheet should be named after the report section or table heading, matching the document (examples: 'Income Statement', 'Balance Sheet', 'Segment Information', 'Risk Table', 'Notes to FS - Table 4', etc). Maintain all original row/column structure and include all source footnotes, captions, and section headers in the appropriate positions for context. \n\nHeader Row Formatting: Bold, fill light gray (RGB 230,230,230), font size 11. Freeze top row in every sheet. Wrap text in all columns if content overflows. Maintain all cell alignments as close to original as possible. \n\nInsert a cover sheet named 'Extracted Sections Index' that lists every sheet name, the original page number/range, and a short description ('Income Statement – p. 23 – Consolidated company-wide income', etc). Do not perform or add any numerical calculations or analytics. The focus is pure, lossless data extraction and organization."
+        },
+        {
+          "id": "extract_all_tables_with_charts",
+          "title": "Extract All Tables & Sections (Add Simple Charts)",
+          "icon": "📊",
+          "description": "Extract all tables and structured content, with optional basic Excel charts for major financial statements, but no derived calculations.",
+          "prompt": "Extract every table and section of structured data from the annual report into a multi-sheet Excel (.xlsx) file. Sheet names should match those of the tables' original titles in the report (e.g., 'Cash Flow Statement', 'Product Sales', 'Management Table 2'). For the three core statements ('Income Statement', 'Balance Sheet', 'Cash Flow Statement'), create a second sheet with the same name plus ' Chart' (e.g. 'Income Statement Chart'), placing a default bar or line chart visualizing the table's top-level rows by year (with no extra calculations or commentary—just raw data charted as-is). \n\nAll other sheet formatting rules: Header row bold, pale blue fill (RGB 217,228,240), font 11. Freeze top row. Wrap text in all columns. Add a first sheet called 'Sections Directory' with a table listing all subsequent sheet names, their corresponding report page(s), and a short summary for user navigation. No calculated fields or analytics—output is strictly direct report extraction with optional reference charts only for core statements."
+        }
+      ]
+    }
+  },
+  "metadata": {
+    "version": "1.0-simple",
+    "last_updated": "2025-07-18",
+    "description": "Intuitive and simple financial document extraction prompts: choose lossless structure-only or add basic charts—no calculations."
+  }
+}

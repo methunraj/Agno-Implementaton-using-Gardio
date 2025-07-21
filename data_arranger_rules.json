@@ -1,0 +1,113 @@
+{
+  "agent_rules": {
+    "name": "Data Arranger Agent Rules",
+    "version": "2.0",
+    "instructions": [
+      "CRITICAL: Use only double quotes for JSON properties and values - NEVER use single quotes or unquoted properties",
+      "CRITICAL: Correct JSON format is { \"property\": \"value\" } - NEVER use { property: 'value' }",
+      "CRITICAL: All JSON property names MUST be enclosed in double quotes",
+      "CRITICAL: All JSON string values MUST use double quotes, not single quotes",
+      "CRITICAL: Always save the output in Session Directory",
+      "ALWAYS generate valid JSON with proper escaping for Excel import",
+      "ALWAYS organize data into exactly 12 standardized sheets with consistent naming",
+      "ALWAYS use sheet names: COMPANY_OVERVIEW, EXECUTIVE_LEADERSHIP, FINANCIAL_STATEMENTS, BUSINESS_SEGMENTS, GEOGRAPHIC_REGIONS, PERFORMANCE_METRICS, OPERATIONAL_DATA, CAPITAL_STRUCTURE, INVESTMENTS_MA, ESG_SUSTAINABILITY, RISK_ANALYSIS, FORWARD_OUTLOOK",
+      "ALWAYS structure each sheet as arrays with 'headers' and 'rows' for direct Excel import",
+      "ALWAYS preserve original values exactly - NO calculations, derivations, or modifications",
+      "ALWAYS use proper JSON data types: numbers as numbers, strings as strings, booleans as true/false",
+      "ALWAYS include source attribution in each row for traceability",
+      "ALWAYS use YYYY-MM-DD format for dates",
+      "ALWAYS escape special characters properly in JSON strings",
+      "ALWAYS provide executive summary with key organizational insights",
+      "ALWAYS include data quality metrics and validation status",
+      "NEVER perform calculations, growth analysis, or trend computations",
+      "NEVER modify numerical values from the extraction phase",
+      "NEVER create new metrics or derived fields",
+      "NEVER ignore or drop extracted data points",
+      "NEVER use inconsistent sheet naming or structure"
+    ],
+    "sheet_organization": [
+      "COMPANY_OVERVIEW: Company identification, legal names, ticker symbols, industry codes, contact information, basic corporate details",
+      "EXECUTIVE_LEADERSHIP: Leadership team, board composition, management compensation, executive changes, governance structure",
+      "FINANCIAL_STATEMENTS: Complete income statement, balance sheet, cash flow statement data organized by line item and period",
+      "BUSINESS_SEGMENTS: Detailed business segment breakdown with revenue, income, assets, and operational metrics by segment",
+      "GEOGRAPHIC_REGIONS: Geographic revenue, income, assets, and operational distribution by country/region",
+      "PERFORMANCE_METRICS: Financial ratios, operational KPIs, performance indicators as stated in documents (no calculations)",
+      "OPERATIONAL_DATA: Employee information, facility data, production metrics, customer data, market information",
+      "CAPITAL_STRUCTURE: Outstanding shares, debt structure, dividends, credit ratings, capital allocation details",
+      "INVESTMENTS_MA: Joint ventures, subsidiaries, M&A activity, investment portfolios, partnership information",
+      "ESG_SUSTAINABILITY: Environmental, social, governance metrics, sustainability targets, ESG ratings and compliance",
+      "RISK_ANALYSIS: Market, credit, operational, regulatory risks, risk management disclosures, mitigation strategies",
+      "FORWARD_OUTLOOK: Management guidance, strategic initiatives, investment plans, future outlook statements"
+    ],
+    "data_standardization": [
+      "Preserve original currency values and units as extracted from documents",
+      "Use consistent date format: YYYY-MM-DD",
+      "Ensure numbers are JSON numbers, not strings",
+      "Calculate percentage values as decimals (0.05 for 5%)",
+      "Maintain original company names and legal designations as found in documents",
+      "Include original language notation when data has been translated",
+      "Preserve original numerical values without currency conversion",
+      "Maintain data type consistency within columns"
+    ],
+    "organization_requirements": [
+      "Group extracted data points into appropriate sheet categories based on content type",
+      "Preserve all original values, units, currencies, and periods exactly as extracted",
+      "Structure data with consistent headers for each sheet type",
+      "Include source attribution for every data point for audit trail",
+      "Organize chronologically where applicable (most recent periods first)",
+      "Group related metrics within sheet categories for logical flow",
+      "Maintain original confidence scores and source locations from extraction",
+      "Structure for immediate Excel import without additional processing",
+      "Ensure data consistency within each sheet category",
+      "Preserve original language notations where applicable"
+    ],
+    "excel_formatting_prep": [
+      "Structure each sheet with consistent header arrays for professional Excel import",
+      "Organize rows as arrays of values matching header sequence exactly",
+      "Prepare data for immediate Excel generation without additional processing",
+      "Include proper data types for Excel recognition (numbers, dates, text)",
+      "Structure for automatic Excel formatting and chart generation",
+      "Organize data to support professional multi-sheet workbook creation",
+      "Ensure headers are descriptive and Excel-compatible (no special characters)",
+      "Prepare summary data for executive dashboard and overview sheets",
+      "Structure for embedded chart data series where applicable",
+      "Optimize data layout for professional Excel report presentation"
+    ],
+    "quality_assurance": [
+      "Verify all JSON syntax is valid and properly escaped for comprehensive data",
+      "Ensure data relationships are consistent across all 12 categories",
+      "Validate that original extracted values are preserved without modification",
+      "Check that all required comprehensive sheets have appropriate data",
+      "Confirm confidence scores are properly maintained from extraction phase",
+      "Verify translation notes and original language information are included when applicable",
+      "Ensure no calculations or derived metrics have been added during organization",
+      "Validate multi-language content is properly formatted for Excel import"
+    ],
+    "insight_generation": [
+    "Generate executive summary highlighting key findings from comprehensive financial data",
+    "Identify significant business segments and geographic presence based on extracted data",
+    "Highlight important financial metrics and operational data as stated in documents",
+    "Flag potential areas of concern or risk factors as identified in source documents",
+    "Summarize ESG metrics, governance information, and sustainability data when available",
+    "Create markdown report with key insights from all 12 comprehensive categories",
+    "Focus on data organization insights without trend analysis or growth calculations"
+  ],
+    "output_structure": [
+      "CRITICAL: Output must be valid JSON with proper escaping and correct syntax",
+      "CRITICAL: JSON property names MUST be in double quotes: \"property\" NOT property",
+      "CRITICAL: JSON string values MUST use double quotes: \"value\" NOT 'value'",
+      "CRITICAL: Validate JSON syntax before output - NO unquoted properties or single quotes",
+      "Root object contains: 'sheets', 'executive_summary', 'data_quality', 'metadata'",
+      "'sheets' object contains exactly 12 named sheet objects with standardized names",
+      "Each sheet object contains 'headers' array and 'rows' array of arrays",
+      "'executive_summary' string highlights key organizational insights and findings",
+      "'data_quality' object includes metrics on completeness, confidence, and validation",
+      "'metadata' object includes organization timestamp and process information",
+      "All sheet names use UPPER_CASE with underscores for consistency",
+      "Headers are descriptive strings, rows are arrays of values",
+      "Maintain proper JSON data types throughout structure",
+      "Include source attribution in row data for traceability",
+      "Structure optimized for immediate Excel generation without modification"
+    ]
+  }
+}

@@ -1,0 +1,95 @@
+{
+  "agent_rules": {
+    "name": "Coding Agent Rules",
+    "version": "1.0",
+    "instructions": [
+      "CRITICAL: Use HYBRID DATA APPROACH - Priority 1: Parse JSON from prompt, Priority 2: Read from file",
+      "CRITICAL: Handle JSON parsing errors gracefully with fallback mechanisms",
+      "CRITICAL: Work with ANY JSON structure - do not require specific formats",
+      "CRITICAL: Create worksheets dynamically based on actual data structure found",
+      "ALWAYS generate executable Python code that processes JSON data and creates Excel workbooks",
+      "ALWAYS use openpyxl exclusively - no other libraries for charts, analysis, or visualization",
+      "ALWAYS create worksheets based on ACTUAL data structure",
+      "ALWAYS include comprehensive error handling and graceful fallbacks",
+      "ALWAYS save Excel output to current working directory with timestamp",
+      "ALWAYS preserve original data values without modification or calculation",
+      "ALWAYS include detailed comments explaining formatting and structure logic",
+      "ALWAYS structure code in logical, well-organized sections",
+      "ALWAYS provide complete, executable code with all necessary imports",
+      "ALWAYS use professional Excel formatting with consistent styling",
+      "ALWAYS create at least one worksheet even if data is incomplete",
+      "NEVER generate HTML, PDF, PNG, CSV, or any non-Excel outputs",
+      "NEVER modify, calculate, or derive new metrics from input data",
+      "NEVER use pandas, matplotlib, seaborn, plotly, or other analysis libraries",
+      "NEVER create separate chart files - only Excel workbooks",
+      "NEVER fail completely due to missing or malformed data - always create something But"
+    ],
+    "code_generation_standards": [
+      "Use openpyxl exclusively for all Excel operations",
+      "Use openpyxl.styles for professional cell formatting and colors",
+      "Use datetime for timestamp generation in filenames",
+      "Use json module for reading input data files",
+      "Use os module for file path operations",
+      "Include comprehensive error handling with try-catch blocks",
+      "Follow PEP 8 style guidelines for clean, readable code",
+      "Structure code with clear functions and logical organization",
+      "Include detailed docstrings and comments for maintainability"
+    ],
+    "data_organization_requirements": [
+      "Organize comprehensive financial data across all 13 categories into Excel worksheets",
+      "Present financial ratios and metrics as extracted from documents without calculations",
+      "Create professional data presentation across multiple comprehensive categories",
+      "Display key performance indicators (KPIs) as stated in source documents",
+      "Present risk factors and forward-looking information as extracted",
+      "Focus on data visualization and presentation without performing analysis or calculations"
+    ],
+    "visualization_standards": [
+      "Use openpyxl for creating embedded Excel charts (LineChart, BarChart, PieChart)",
+      "Generate charts directly within Excel worksheets for integrated reporting",
+      "Create professional-looking charts with proper titles, labels, and legends",
+      "Use consistent color schemes (blue/navy theme) across all charts",
+      "Include data source attribution and timestamps within Excel",
+      "Optimize chart sizes and positioning within Excel worksheets"
+    ],
+    "output_requirements": [
+      "Generate ONLY Excel files (.xlsx) - no other file formats",
+      "Create exactly 12 worksheets with standardized names: COMPANY_OVERVIEW, EXECUTIVE_LEADERSHIP, FINANCIAL_STATEMENTS, BUSINESS_SEGMENTS, GEOGRAPHIC_REGIONS, PERFORMANCE_METRICS, OPERATIONAL_DATA, CAPITAL_STRUCTURE, INVESTMENTS_MA, ESG_SUSTAINABILITY, RISK_ANALYSIS, FORWARD_OUTLOOK",
+      "Save Excel file to current working directory with timestamp format: Financial_Report_YYYYMMDD_HHMMSS.xlsx",
+      "Include professional formatting with consistent styling across all sheets",
+      "Ensure all data is properly formatted with appropriate number formats, alignments, and colors",
+      "Create print-ready worksheets with proper margins and layout"
+    ],
+    "file_management": [
+      "Read input JSON file using relative path: 'arranged_comprehensive_financial_data.json'",
+      "Save Excel file using timestamp format: 'Financial_Report_YYYYMMDD_HHMMSS.xlsx'",
+      "Save to current working directory (PythonTools handles directory management)",
+      "Verify input file exists before attempting to read",
+      "Include comprehensive error handling for file operations",
+      "Ensure Excel file is properly closed after creation",
+      "Create single Excel workbook containing all 12 worksheets",
+      "Include file creation timestamp and source information in Excel properties"
+    ],
+    "error_handling": [
+      "Validate input JSON file exists before attempting to read",
+      "Verify JSON structure contains expected sheet data",
+      "Handle missing or incomplete sheet data gracefully",
+      "Include try-catch blocks around all file operations",
+      "Provide clear, informative error messages",
+      "Log key operations and any issues encountered",
+      "Continue processing other sheets if one sheet has issues",
+      "Ensure Excel file is saved even if some sheets are incomplete",
+      "Handle data type mismatches in JSON gracefully",
+      "Validate that required openpyxl modules are available"
+    ],
+    "execution_requirements": [
+      "Generate complete, standalone Python code that can be executed immediately",
+      "Include all necessary imports at the top of the code",
+      "Structure code with clear main execution flow",
+      "Include comprehensive error handling throughout",
+      "Provide detailed comments explaining each major section",
+      "Ensure code creates Excel file successfully when run",
+      "Include verification that output file was created successfully",
+      "Structure for immediate execution without additional setup"
+    ]
+  }
+}

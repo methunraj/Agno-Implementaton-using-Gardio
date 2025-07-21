@@ -1,0 +1,15 @@
+agno>=1.7.4
+gradio
+google-generativeai
+PyPDF2
+Pillow
+python-dotenv
+pandas
+matplotlib
+openpyxl
+python-docx
+lxml
+markdown
+requests
+google-genai
+seaborn
