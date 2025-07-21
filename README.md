@@ -1,13 +1,3 @@
----
-title: Agno Document Analysis
-emoji: 📄
-colorFrom: blue
-colorTo: purple
-sdk: docker
-pinned: false
-license: mit
----
-
 # Agno Document Analysis Workflow
 
 A sophisticated document processing application built with Agno v1.7.4 featuring a multi-agent workflow for intelligent document analysis and data extraction.
